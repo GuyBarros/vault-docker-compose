@@ -1,0 +1,14 @@
+version: '3.6'
+services:
+  vault: # https://hub.docker.com/r/hashicorp/vault-enterprise/tags
+    container_name: vault.server
+    image: hashicorp/vault-enterprise:1.4.2_ent
+    ports:
+      - "8200:8200"
+    volumes:
+      - ./vault.volume/config:/vault/config
+      - ./vault.volume/file:/vault/file
+      - ./vault.volume/logs:/vault/logs
+    cap_add:
+      - IPC_LOCK
+    command: server
