@@ -3,11 +3,12 @@
 this project is meant to be use as a repeatable, three command approach to setting up a vault server via docker.
 
 ```bash
-git clone this repo
+git clone https://github.com/GuyBarros/vault-docker-compose
+cd vault-docker-compose
 docker-compose up
 ```
 
-and then from another terminal
+(Optional) and then from another terminal
 
 ```bash
 ./vault-init.sh
